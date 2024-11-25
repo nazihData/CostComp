@@ -227,7 +227,7 @@ def app_content():
                 else:
                     st.write("Discrepancies found:")
                     st.dataframe(odd_cost)
-                    st.dataframe(cost_compare[cost_compare['Cost Difference'] == 0])
+                    
                     download_links3 = {
                         'Download Report - Disc.': odd_cost,
                     }
@@ -236,6 +236,16 @@ def app_content():
                     for label3, data3 in download_links3.items():
                         download_link3 = get_download_link(data3, label3)
                         st.markdown(download_link3, unsafe_allow_html=True)
+
+                st.write("**Clean Identical Data**")
+                st.dataframe(cost_compare[cost_compare['Cost Difference'] == 0])
+                download_links4 = {
+                        'Download Report - Disc.': (cost_compare[cost_compare['Cost Difference'] == 0]),
+                    }
+                # Display download links
+                for label4, data4 in download_links4.items():
+                    download_link4 = get_download_link(data4, label4)
+                    st.markdown(download_link4, unsafe_allow_html=True)
             except Exception as e:
                 st.error(f"An error occurred: {e}")
 
