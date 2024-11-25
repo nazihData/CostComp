@@ -227,6 +227,7 @@ def app_content():
                 else:
                     st.write("Discrepancies found:")
                     st.dataframe(odd_cost)
+                    st.dataframe(cost_compare[cost_compare['Cost Difference'] == 0])
                     download_links3 = {
                         'Download Report - Disc.': odd_cost,
                     }
