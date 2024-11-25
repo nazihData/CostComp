@@ -240,7 +240,7 @@ def app_content():
                 st.write("**Clean Identical Data**")
                 st.dataframe(cost_compare[cost_compare['Cost Difference'] == 0])
                 download_links4 = {
-                        'Download Report - Disc.': (cost_compare[cost_compare['Cost Difference'] == 0]),
+                        'Download Report - Identical.': (cost_compare[cost_compare['Cost Difference'] == 0]),
                     }
                 # Display download links
                 for label4, data4 in download_links4.items():
