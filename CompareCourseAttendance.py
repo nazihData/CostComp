@@ -63,7 +63,7 @@ USER_CREDENTIALS = {
 }
 
 
-usermap = {'admin': 'Ahmed Nazih', '203359': 'Nahla', '206354': 'Body'}
+usermap = {'admin': 'Ahmed Nazih', 'nahla': 'Nahla', 'body': 'Body'}
 
 # Function to authenticate users
 def authenticate(username, password):
