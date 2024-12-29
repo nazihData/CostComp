@@ -57,8 +57,8 @@ def map_course_name(row, reference_df):
 # Dummy credentials - replace with a more secure approach for production
 USER_CREDENTIALS = {
     "admin": "14591",
-    "203359": "gm123456",
-    "206354": "body123456"
+    "nahla": "gm123456",
+    "body": "body123456"
 
 }
 
